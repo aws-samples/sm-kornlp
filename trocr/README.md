@@ -47,7 +47,7 @@ processor = TrOCRProcessor.from_pretrained("microsoft/trocr-base-handwritten")
 model = VisionEncoderDecoderModel.from_pretrained("daekeun-ml/ko-trocr-base-nsmc-news-chatbot")
 tokenizer = AutoTokenizer.from_pretrained("daekeun-ml/ko-trocr-base-nsmc-news-chatbot")
 
-url = "https://raw.githubusercontent.com/aws-samples/aws-ai-ml-workshop-kr/master/sagemaker/sm-kornlp/trocr/sample_imgs/news_1.jpg"
+url = "https://raw.githubusercontent.com/aws-samples/sm-kornlp/main/trocr/sample_imgs/news_1.jpg"
 response = requests.get(url)
 img = Image.open(BytesIO(response.content))
 
