@@ -175,15 +175,6 @@ def main():
     warmup_steps = math.ceil(len(train_dataloader) * num_epochs * 0.1) # 10% of train data for warm-up
     logger.info("Warmup-steps: {}".format(warmup_steps))
     
-    train_dataset = SentencesDataset(train_samples, model)
-    train_dataloader = DataLoader(train_dataset, shuffle=True, batch_size=train_batch_size)
-    train_loss = losses.CosineSimilarityLoss(model=model)
-
-    evaluator = EmbeddingSimilarityEvaluator.from_input_examples(dev_samples, name='sts-dev')
-
-    warmup_steps = math.ceil(len(train_dataloader) * num_epochs * 0.1) # 10% of train data for warm-up
-    logger.info("Warmup-steps: {}".format(warmup_steps))
-    
     ################################################
     # Training
     ################################################     
