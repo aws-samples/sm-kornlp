@@ -12,3 +12,5 @@ transformers
 datasets
 jiwer
 nvidia-ml-py3
+wikipedia
+jiwer
